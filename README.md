@@ -99,7 +99,7 @@ PEDS通过周期性触发模拟偶发性事件，比如乘客等待站在走廊�
 
 ​    宏观环境主要包括飞机舱门个数、飞机座位数目、飞机座位布局、飞机过道数目等，而我们所参考的研究中，除了波音公司对舱门开放个数进行了研究[2]，其他全部采用的是下图所视单过道、三列座位的基本布局，只对座位个数进行了调整。
 
-![img](/Users/sean/Documents/Projects/My Github/Boarding-Simulation/img/clip_image004.png)*一般采用的飞机内部结构*
+![img](img/clip_image004.png)*一般采用的飞机内部结构*
 
 
 
@@ -111,7 +111,7 @@ PEDS通过周期性触发模拟偶发性事件，比如乘客等待站在走廊�
 
 在登机过程中，也需要考虑实际的限制，比如头等舱、一致性概率（比如：旅行团）、上座率、分组情况（比如：家庭）。
 
-![img](/Users/sean/Documents/Projects/My Github/Boarding-Simulation/img/clip_image005.png)
+![img](img/clip_image005.png)
 
 ### 2.4.2 通过优化算法获得登机策略
 
@@ -141,7 +141,7 @@ PEDS通过周期性触发模拟偶发性事件，比如乘客等待站在走廊�
 
 ​    我们如果需要比较两种登机策略的效果，就需要对模型在各种情况下的表现进行全面的分析。而实际情况中，我们无法对全部的实验情况进行比较，所以一般过离散事件仿真的方式以实现目的。比如下图[5]即离散事件仿真的一个案例，通过设置不同的行为模型参数，枚举所有情况即可。
 
-![img](/Users/sean/Documents/Projects/My Github/Boarding-Simulation/img/clip_image008.png)2.6.4 如何进行稳健性检验
+![img](img/clip_image008.png)2.6.4 如何进行稳健性检验
 
 ​    稳健型检验的目的主要是检测一种登机策略，能否获得较为稳定、方差较小的实验结果。由于飞机登机过程中，可能会出现各类随机事件，同时乘客登机的行为模拟完全可能也不符合模拟分布，而飞机的登机时间需要按照最差情况进行安排的，否则乘客还未入座飞机已经起飞，所以需要保证登机时间的稳健性。
 
@@ -149,7 +149,7 @@ PEDS通过周期性触发模拟偶发性事件，比如乘客等待站在走廊�
 
 ### 2.7.1 登机时间统计分析
 
-![img](/Users/sean/Documents/Projects/My Github/Boarding-Simulation/img/clip_image009.png)![img](/Users/sean/Documents/Projects/My Github/Boarding-Simulation/img/clip_image010.png)
+![img](img/clip_image009.png)![img](img/clip_image010.png)
 
 *图一：**Steffen**对登机时间的重复实验结果* *图二：**Ferrari**对重复实验结果的统计分析（均值**/**最值**/**方差）*
 
@@ -161,7 +161,7 @@ PEDS通过周期性触发模拟偶发性事件，比如乘客等待站在走廊�
 
 ### 2.7.1 不同上座率时的登机时间
 
-![img](/Users/sean/Documents/Projects/My Github/Boarding-Simulation/img/clip_image011.png)
+![img](img/clip_image011.png)
 
 ​    Ferrari通过调整上座率，重复进行不同方案下的实验结果，计算其期望值并进行比较。其他试验如果需要计算在不同方案受某试验参数的影响，也基本会沿用该方式，进行离散的统计计算。
 
