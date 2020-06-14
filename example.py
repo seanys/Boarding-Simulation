@@ -10,23 +10,6 @@ INTERVAL_CUSTOMERS = 10.0 # 客户到达的间距时间
 MIN_PATIENCE = 1 # 客户等待时间, 最小
 MAX_PATIENCE = 3 # 客户等待时间, 最大
 
-class Passenger:
-    '''
-    生成乘客，随机生成服务时间均值、是否携带行李
-    '''
-    def __init__(self):
-        # 是否携带行李，假设80%乘客携带行李
-        self.carry = False
-        if random.random() < 0.8:
-            self.carry = True
-        # 放置行李的时间 - 提前生成 - 30s - 60s
-        self.luagge_time = random.random() * 30 + 30
-        # 平均过道时间和过座位时间 3～5s
-        self.exp_aisle_time = random.random() * 2 + 3
-        self.exp_seat_time = random.random() * 2 + 3
-        # 位置
-        
-
 
 def source(env, number, interval, counter):
     """进程用于生成客户"""
