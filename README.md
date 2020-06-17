@@ -10,12 +10,12 @@ E-mail: tjyangshan@gmail.com, prinway1226@gmail.com
 
 ## How to simulate boarding?
 
-**Boarding is just like a queuing problem**. If the one at the front of the queue hasn't settled his luggage, people behind him must wait until he leave the aisle. 
+**The boarding problem is just like the queuing problem**. If the one at the front of the queue hasn't settled his luggage, people behind him must wait until he leaves the aisle.
 
-However, There are also some differences between them. 
+However, there are also some differences between them. 
 
-- There is only one queue in boarding problem and when the passenager will leave this queue depends on where his seat located.
-- Passengers interactive behaviors in boarding problem will be more complicated.
+- There is only one queue in boarding problem and when the passengers will leave this queue depends on where his seat located.
+- Passengers' interactive behaviors in boarding problem will be more complicated.
 - etc.......
 
 The queuing problem's model should be modified.
@@ -24,7 +24,7 @@ The queuing problem's model should be modified.
 
 First of all, we should build a simulation environment. The most widely used model is the grid-based simulation environment. 
 
-**In brief, this model assumes that there are many "counters" like grids. Passengers will move from one grid to  another and be "served" in every grid. Time costed depends on whether they only walk through the grid or they settle luggages in this grid.** 
+**In brief, this model assumes that there are many "counters" like grids. Passengers will move from one grid to  another and be "served" in every grid. Time costed depends on whether they only walk through the grid or they settle luggage in this grid.** 
 
 ![img](img/clip_image002.png)
 
@@ -32,9 +32,9 @@ First of all, we should build a simulation environment. The most widely used mod
 
 There are many passengers'  behaviors. In our current work, we only handle some of them.
 
-- **Seat interface**. When a passgenger's seat is near windows(Seat C) and seat A or seat B has been seated by other passengers, they need move to asile and wait this passenger to be seated at seat C.
+- **Seat interface**. When a passenger's seat is near windows(Seat C) and seat A or seat B has been seated by other passengers, they need to move to the aisle and wait for this passenger to be seated at seat C.
 
-<img src="img/image-20200610003854066.png" alt="image-20200610003854066" height="200px" />
+  <img src="img/image-20200610003854066.png" alt="image-20200610003854066" height="200px" />
 
 - **Passengers will be "served" at every grid and service time depends on their behaviors.** 
 
@@ -52,9 +52,41 @@ There are many passengers'  behaviors. In our current work, we only handle some 
 
 ## Simulation Test
 
+```
+...
+Passenger14 enter the long grid02 at 327.20.
+Passenger11 leaves the short grid00 at 331.03.
+Passenger11enter the short grid01 at 331.03.
+Passenger11 leaves the short grid01 at 332.03.
+Passenger11enter the short grid02 at 332.03.
+Passenger14 leaves the long grid02 at 332.72.
+Passenger14enter the service grid at 332.72.
+Settle luagge
+Passenger17 enter the long grid02 at 332.72.
+Passenger11 leaves the short grid02 at 339.34.
+Passenger17 leaves the long grid02 at 339.41.
+Passenger08enter the service grid at 339.41.
+Settle luagge
+Passenger14 leaves the service grid at 398.05.
+Passenger14enter the short grid00 at 398.05.
+Passenger17enter the service grid at 398.05.
+Settle luagge
+Passenger08 leaves the service grid at 399.14.
+Passenger08enter the short grid00 at 399.14.
+Passenger08 leaves the short grid00 at 400.56.
+Passenger14 leaves the short grid00 at 403.95.
+Passenger17 leaves the service grid at 407.70.
+Passenger17enter the short grid00 at 407.70.
+Passenger17 leaves the short grid00 at 408.60.
+Passenger17enter the short grid01 at 408.60.
+Passenger17 leaves the short grid01 at 410.16.
+Passenger17enter the short grid02 at 410.16.
+Passenger17 leaves the short grid02 at 412.80.
 
-
-
+Number of passengers: 18
+Boarding strategy: RANDOM
+Total time: 6.880068467888844 min
+```
 
 ## Paper(Chinese)
 
